@@ -27,12 +27,12 @@ function Movies() {
       <div className="row">
         <h2>Popular on PRISOW</h2>
         <div className="movie-list">
-        <img src="https://image.tmdb.org/t/p/original/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg" />
-         <img src="https://media-cache.cinematerial.com/p/500x/wo2fydih/wednesday-movie-cover.jpg?v=1700736342" />
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/8d8f28105415493.619ded067937d.jpg" />
-          <img src="https://cdn.marvel.com/content/1x/snh_online_6072x9000_posed_01.jpg" />
-          <img src="https://lumiere-a.akamaihd.net/v1/images/p_encanto_homeent_22359_4892ae1c.jpeg?region=0%2C0%2C540%2C810" />
-          <img src="https://m.media-amazon.com/images/M/MV5BNjcxMjg1Njg2NF5BMl5BanBnXkFtZTcwMjQ4NzMzMw@@._V1_.jpg" />
+        <img src="https://image.tmdb.org/t/p/original/uOOtwVbSr4QDjAGIifLDwpb2Pdl.jpg" alt="movie poster" />
+         <img src="https://media-cache.cinematerial.com/p/500x/wo2fydih/wednesday-movie-cover.jpg?v=1700736342" alt="movie poster" />
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/8d8f28105415493.619ded067937d.jpg" alt="movie poster"/>
+          <img src="https://cdn.marvel.com/content/1x/snh_online_6072x9000_posed_01.jpg" alt="movie poster"/>
+          <img src="https://lumiere-a.akamaihd.net/v1/images/p_encanto_homeent_22359_4892ae1c.jpeg?region=0%2C0%2C540%2C810" alt="movie poster"/>
+          <img src="https://m.media-amazon.com/images/M/MV5BNjcxMjg1Njg2NF5BMl5BanBnXkFtZTcwMjQ4NzMzMw@@._V1_.jpg" alt="movie poster"/>
          
           
         </div>
