@@ -25,7 +25,7 @@ function LoginWrapper({ setIsLoggedIn }) {
 
   const handleLogin = async (email, password) => {
     try {
-      const response = await fetch("https://movie-login-clone.onrender.com/login", {
+      const response = await fetch("https://movie-login-clone-1.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
