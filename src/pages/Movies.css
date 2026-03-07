@@ -81,7 +81,8 @@
   transform: scale(1.1);
 }
 
-/* Responsive Media Queries */
+/* ===== ONLY RESPONSIVE FIXES ADDED BELOW ===== */
+/* I added/changed only these media query sections */
 
 /* Tablets */
 @media (max-width: 768px) {
@@ -104,6 +105,11 @@
 
   .banner-text p {
     font-size: 14px;
+    /* FIX: Limit text to 2 lines on tablet */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .row {
@@ -129,6 +135,8 @@
     top: 30%;
     left: 20px;
     max-width: 250px;
+    /* FIX: Add right padding so text doesn't touch edge */
+    padding-right: 15px;
   }
 
   .banner-text h1 {
@@ -137,12 +145,19 @@
 
   .banner-text p {
     font-size: 12px;
+    /* FIX: Limit text to 2 lines on mobile */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    /* FIX: Make buttons stack properly */
+    width: 100%;
   }
 
   .play,
@@ -151,6 +166,11 @@
     text-align: center;
     padding: 8px 0;
     font-size: 14px;
+    /* FIX: Remove margin-right from play button when stacked */
+  }
+  
+  .play {
+    margin-right: 0;
   }
 
   .row {
@@ -167,5 +187,26 @@
 
   .movie-list img {
     width: 120px;
+  }
+}
+
+/* FIX: Add new breakpoint for very small phones */
+@media (max-width: 360px) {
+  .banner-text {
+    left: 15px;
+    max-width: 200px;
+    padding-right: 10px;
+  }
+  
+  .banner-text h1 {
+    font-size: 18px;
+  }
+  
+  .banner-text p {
+    font-size: 11px;
+  }
+  
+  .movie-list img {
+    width: 100px;
   }
 }

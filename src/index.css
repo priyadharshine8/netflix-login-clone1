@@ -2,4 +2,19 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: black;
+  /* FIX: Add padding to account for fixed navbar */
+  padding-top: 70px;
+}
+
+/* FIX: Adjust padding for mobile */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 90px;
+  }
 }

@@ -1,3 +1,4 @@
+/* Navbar General */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -33,7 +34,7 @@
   color: #e50914;
 }
 
-/* Responsive for tablets */
+/* Responsive for tablets (≤768px) */
 @media (max-width: 768px) {
   .navbar {
     padding: 10px 20px;
@@ -45,9 +46,10 @@
 
   .navbar .nav-links {
     gap: 15px;
-    justify-content: center;
+    justify-content: center; /* center links */
     width: 100%;
     margin-top: 10px;
+    flex-wrap: wrap; /* allow wrapping */
   }
 
   .navbar .nav-links li {
@@ -55,28 +57,37 @@
   }
 }
 
-/* Responsive for mobile phones */
+/* Responsive for mobile phones (≤480px) */
 @media (max-width: 480px) {
   .navbar {
-    flex-direction: column; /* stack logo and links */
+    flex-direction: column; /* stack logo and links vertically */
     align-items: center;
     padding: 10px 10px;
   }
 
   .navbar .logo {
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 
   .navbar .nav-links {
-    flex-direction: column; /* stack links vertically */
+    flex-direction: row; /* keep links in a row */
     gap: 10px;
-    margin-top: 5px;
     width: 100%;
-    align-items: center;
+    overflow-x: auto; /* scroll horizontally */
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+    margin-top: 5px;
+    padding-bottom: 5px;
   }
 
   .navbar .nav-links li {
     font-size: 14px;
+    flex: 0 0 auto; /* prevent items from shrinking */
+    text-align: center;
+  }
+
+  /* Optional: hide scrollbar in Chrome/Edge/Safari */
+  .navbar .nav-links::-webkit-scrollbar {
+    display: none;
   }
 }
