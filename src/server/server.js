@@ -12,7 +12,7 @@ app.post("/login", (req, res) => {
   const { email, password } = req.body;
 
   // Mock credentials
-  if (email === "user@test.com" && password === "123456") {
+  if (email === "prisow@gmail.com" && password === "2117") {
     res.json({ success: true, message: "Login successful!" });
   } else {
     res.status(401).json({ success: false, message: "Invalid credentials" });
