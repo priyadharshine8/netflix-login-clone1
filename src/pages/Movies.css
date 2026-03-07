@@ -1,3 +1,4 @@
+/* Movies Page General */
 .movies-page {
   color: white;
   font-family: Arial, sans-serif;
@@ -78,4 +79,93 @@
 
 .movie-list img:hover {
   transform: scale(1.1);
+}
+
+/* Responsive Media Queries */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .banner {
+    height: 350px;
+  }
+
+  .banner img {
+    height: 350px;
+  }
+
+  .banner-text {
+    left: 40px;
+    max-width: 350px;
+  }
+
+  .banner-text h1 {
+    font-size: 35px;
+  }
+
+  .banner-text p {
+    font-size: 14px;
+  }
+
+  .row {
+    padding: 30px 40px;
+  }
+
+  .movie-list img {
+    width: 150px;
+  }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+  .banner {
+    height: 250px;
+  }
+
+  .banner img {
+    height: 250px;
+  }
+
+  .banner-text {
+    top: 30%;
+    left: 20px;
+    max-width: 250px;
+  }
+
+  .banner-text h1 {
+    font-size: 22px;
+  }
+
+  .banner-text p {
+    font-size: 12px;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .play,
+  .info {
+    width: 100%;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 14px;
+  }
+
+  .row {
+    padding: 20px 10px;
+  }
+
+  .row h2 {
+    font-size: 18px;
+  }
+
+  .movie-list {
+    gap: 10px;
+  }
+
+  .movie-list img {
+    width: 120px;
+  }
 }
