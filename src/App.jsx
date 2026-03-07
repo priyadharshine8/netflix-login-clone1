@@ -1,21 +1,26 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route, Navigate, useNavigate } from "react-router-dom";
 import Login from "./pages/Login";
 import Movies from "./pages/Movies";
 
 function App() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<LoginWrapper />} />
-        <Route path="/movies" element={<Movies />} />
+        <Route path="/" element={<LoginWrapper setIsLoggedIn={setIsLoggedIn} />} />
+        <Route
+          path="/movies"
+          element={isLoggedIn ? <Movies /> : <Navigate to="/" />}
+        />
       </Routes>
     </Router>
   );
 }
 
-// Wrapper to handle login navigation
-function LoginWrapper() {
+// Login wrapper
+function LoginWrapper({ setIsLoggedIn }) {
   const navigate = useNavigate();
 
   const handleLogin = async (email, password) => {
@@ -31,12 +36,13 @@ function LoginWrapper() {
       const data = await response.json();
 
       if (data.success) {
+        setIsLoggedIn(true);
         navigate("/movies");
       } else {
         alert("Invalid email or password");
       }
     } catch (error) {
-      console.error("Login error:", error);
+      console.error(error);
       alert("Server error");
     }
   };
