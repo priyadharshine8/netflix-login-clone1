@@ -17,14 +17,27 @@ function App() {
 // Wrapper to handle login navigation
 function LoginWrapper() {
   const navigate = useNavigate();
-  const validEmail = "prisow@gmail.com";
-  const validPassword = "2117";
 
-  const handleLogin = (email, password) => {
-    if (email === validEmail && password === validPassword) {
-      navigate("/movies");
-    } else {
-      alert("Invalid email or password");
+  const handleLogin = async (email, password) => {
+    try {
+      const response = await fetch("https://movie-login-clone.onrender.com/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        navigate("/movies");
+      } else {
+        alert("Invalid email or password");
+      }
+    } catch (error) {
+      console.error("Login error:", error);
+      alert("Server error");
     }
   };
 
